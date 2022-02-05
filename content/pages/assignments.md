@@ -13,15 +13,144 @@ If you want your solution to be used as an example for the class, we encourage y
 
 For some problems, you will be required to submit syntax-checked Tempo code for your distributed algorithms. Information about Tempo can be found in the [Tools]({{< baseurl >}}/pages/tools) section. 
 
-| ASSN # | ASSIGNMENTS | NOTES |
-| --- | --- | --- |
-| 1 |  {{< br >}}{{< br >}} Part A ([PDF]({{< baseurl >}}/resources/mit6_852jf09_pset1a)) {{< br >}}{{< br >}} Part B ([PDF]({{< baseurl >}}/resources/mit6_852jf09_pset1b)) {{< br >}}{{< br >}}  | &nbsp; |
-| 2 |  {{< br >}}{{< br >}} Part A ([PDF]({{< baseurl >}}/resources/mit6_852jf09_pset2a)) {{< br >}}{{< br >}} Part B ([PDF]({{< baseurl >}}/resources/mit6_852jf09_pset2b)) {{< br >}}{{< br >}}  | &nbsp; |
-| 3 |  {{< br >}}{{< br >}} Part A ([PDF]({{< baseurl >}}/resources/mit6_852jf09_pset3a)) {{< br >}}{{< br >}} Part B ([PDF]({{< baseurl >}}/resources/mit6_852jf09_pset3b)) {{< br >}}{{< br >}}  | Part B, Problem 4: The question asks for a description of the best algorithm you can devise that solves the k-pseudo-session problem and its worst case time complexity. The time complexity is measured according to T(A) as defined on p. 557 of the textbook. |
-| 4 |  {{< br >}}{{< br >}} Part A ([PDF]({{< baseurl >}}/resources/mit6_852jf09_pset4a)) {{< br >}}{{< br >}} Part B ([PDF]({{< baseurl >}}/resources/mit6_852jf09_pset4b)) {{< br >}}{{< br >}}  | &nbsp; |
-| 5 |  {{< br >}}{{< br >}} Part A ([PDF]({{< baseurl >}}/resources/mit6_852jf09_pset5a)) {{< br >}}{{< br >}} Part B ([PDF]({{< baseurl >}}/resources/mit6_852jf09_pset5b)) {{< br >}}{{< br >}}  | &nbsp; |
-| 6 |  {{< br >}}{{< br >}} Part A ([PDF]({{< baseurl >}}/resources/mit6_852jf09_pset6a)) {{< br >}}{{< br >}} Part B ([PDF]({{< baseurl >}}/resources/mit6_852jf09_pset6b)) {{< br >}}{{< br >}}  | Part A: In an invisible read, the transaction does not write any control information into the shared memory to inform the other transactions on possible read/write conflicts. Hence note that in the context of obstruction-free STM (software transactional memory), invisible reads require a read validation step. |
-| 7 | ([PDF]({{< baseurl >}}/resources/mit6_852jf09_pset7)) |   
+{{< tableopen >}}
+{{< theadopen >}}
+{{< tropen >}}
+{{< thopen >}}
+ASSN #
+{{< thclose >}}
+{{< thopen >}}
+ASSIGNMENTS
+{{< thclose >}}
+{{< thopen >}}
+NOTES
+{{< thclose >}}
+
+{{< trclose >}}
+
+{{< theadclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+1
+{{< tdclose >}}
+{{< tdopen >}}
+
+
+Part A ([PDF]({{< baseurl >}}/resources/mit6_852jf09_pset1a))
+
+Part B ([PDF]({{< baseurl >}}/resources/mit6_852jf09_pset1b))
+
+
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+2
+{{< tdclose >}}
+{{< tdopen >}}
+
+
+Part A ([PDF]({{< baseurl >}}/resources/mit6_852jf09_pset2a))
+
+Part B ([PDF]({{< baseurl >}}/resources/mit6_852jf09_pset2b))
+
+
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+3
+{{< tdclose >}}
+{{< tdopen >}}
+
+
+Part A ([PDF]({{< baseurl >}}/resources/mit6_852jf09_pset3a))
+
+Part B ([PDF]({{< baseurl >}}/resources/mit6_852jf09_pset3b))
+
+
+{{< tdclose >}}
+{{< tdopen >}}
+Part B, Problem 4: The question asks for a description of the best algorithm you can devise that solves the k-pseudo-session problem and its worst case time complexity. The time complexity is measured according to T(A) as defined on p. 557 of the textbook.
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+4
+{{< tdclose >}}
+{{< tdopen >}}
+
+
+Part A ([PDF]({{< baseurl >}}/resources/mit6_852jf09_pset4a))
+
+Part B ([PDF]({{< baseurl >}}/resources/mit6_852jf09_pset4b))
+
+
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+5
+{{< tdclose >}}
+{{< tdopen >}}
+
+
+Part A ([PDF]({{< baseurl >}}/resources/mit6_852jf09_pset5a))
+
+Part B ([PDF]({{< baseurl >}}/resources/mit6_852jf09_pset5b))
+
+
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+6
+{{< tdclose >}}
+{{< tdopen >}}
+
+
+Part A ([PDF]({{< baseurl >}}/resources/mit6_852jf09_pset6a))
+
+Part B ([PDF]({{< baseurl >}}/resources/mit6_852jf09_pset6b))
+
+
+{{< tdclose >}}
+{{< tdopen >}}
+Part A: In an invisible read, the transaction does not write any control information into the shared memory to inform the other transactions on possible read/write conflicts. Hence note that in the context of obstruction-free STM (software transactional memory), invisible reads require a read validation step.
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+7
+{{< tdclose >}}
+{{< tdopen >}}
+([PDF]({{< baseurl >}}/resources/mit6_852jf09_pset7))
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 ### Open Questions
 

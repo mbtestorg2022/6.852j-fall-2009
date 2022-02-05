@@ -4,30 +4,357 @@ title: Calendar
 uid: df97dc72-d4cb-f588-e631-716074525507
 ---
 
-| SES # | TOPICS | KEY DATES |
-| --- | --- | --- |
-| 1 | Course overview. Synchronous networks. Leader election in synchronous ring networks. | Homework 1a out |
-| 2 | Leader election in rings. Basic computational tasks in general synchronous networks: leader election. Breadth-first search. Broadcast and convergecast. Shortest paths. | &nbsp; |
-| 3 | Spanning trees. Minimum spanning trees. | Homework 1b out |
-| 4 | Fault-tolerant consensus. Link failures: the two generals problem. Process failures (stopping, Byzantine). Algorithms for agreement with stopping and Byzantine failures. Exponential information gathering. | &nbsp; |
-| 5 | Number-of-processor bounds for Byzantine agreement. Weak Byzantine agreement. Time bounds for consensus problems. |  {{< br >}}{{< br >}} Homework 1 due {{< br >}}{{< br >}} Homework 2a out {{< br >}}{{< br >}}  |
-| 6 | _k_\-set-agreement. Approximate agreement. Distributed commit. | &nbsp; |
-| 7 | Asynchronous distributed computing. Formal modeling of asynchronous systems using interacting state machines (I/O automata). Proving correctness of distributed algorithms. | Homework 2b out |
-| 8 | Non-fault-tolerant algorithms for asynchronous networks. Leader election, breadth-first search, shortest paths, broadcast and convergecast. | &nbsp; |
-| 9 | Spanning trees. Gallager _et al_. minimum spanning trees. |  {{< br >}}{{< br >}} Homework 2 due {{< br >}}{{< br >}} Homework 3a out {{< br >}}{{< br >}}  |
-| 10 | Synchronizers. Synchronizer applications. Synchronous vs. asynchronous distributed systems. | Homework 3b out |
-| 11 | Time, clocks, and the ordering of events. State-machine simulation. Vector timestamps. | &nbsp; |
-| 12 | Stable property detection. Distributed termination. Global snapshots. Deadlock detection. |  {{< br >}}{{< br >}} Homework 3 due {{< br >}}{{< br >}} Homework 4a out {{< br >}}{{< br >}}  |
-| 13 | Asynchronous shared-memory systems. The mutual exclusion problem. Mutual exclusion algorithms. | &nbsp; |
-| 14 | More mutual exclusion algorithms. Bounds on shared memory for mutual exclusion. Resource allocation. The Dining Philosophers problem. | Homework 4b out |
-| 15 | Shared-memory multiprocessors. Contention, caching, locality. Practical mutual exclusion algorithms. Reading/writing locks. | &nbsp; |
-| 16 | Impossibility of consensus in asynchronous, fault-prone, shared-memory systems. |  {{< br >}}{{< br >}} Homework 4 due {{< br >}}{{< br >}} Homework 5a out {{< br >}}{{< br >}}  |
-| 17 | Atomic objects | &nbsp; |
-| 18 | Atomic snapshot algorithms. Atomic read/write register algorithms. | Homework 5b out |
-| 19 | List algorithms: locking algorithms, optimistic algorithms, lock-free algorithms, lazy algorithms. | &nbsp; |
-| 20 | Transactional memory: obstruction-free and lock-based implementations. |  {{< br >}}{{< br >}} Homework 5 due {{< br >}}{{< br >}} Homework 6a out {{< br >}}{{< br >}}  |
-| 21 | Wait-free computability. The wait-free consensus hierarchy. | Homework 6b out |
-| 22 | Wait-free vs. _f_\-fault-tolerant atomic objects. Boosting fault-tolerance. | &nbsp; |
-| 23 | Asynchronous network model vs. asynchronous shared-memory model. Impossibility of consensus in asynchronous networks. Failure detectors and consensus. Paxos consensus algorithm. |  {{< br >}}{{< br >}} Homework 6 due {{< br >}}{{< br >}} Homework 7 out {{< br >}}{{< br >}}  |
-| 24 | Self-stabilizing algorithms | &nbsp; |
-| 25 | Timing-based systems. Modeling and verification. Timing-based algorithms for mutual exclusion and consensus. Clock synchronization. | Homework 7 due
+{{< tableopen >}}
+{{< theadopen >}}
+{{< tropen >}}
+{{< thopen >}}
+SES #
+{{< thclose >}}
+{{< thopen >}}
+TOPICS
+{{< thclose >}}
+{{< thopen >}}
+KEY DATES
+{{< thclose >}}
+
+{{< trclose >}}
+
+{{< theadclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+1
+{{< tdclose >}}
+{{< tdopen >}}
+Course overview. Synchronous networks. Leader election in synchronous ring networks.
+{{< tdclose >}}
+{{< tdopen >}}
+Homework 1a out
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+2
+{{< tdclose >}}
+{{< tdopen >}}
+Leader election in rings. Basic computational tasks in general synchronous networks: leader election. Breadth-first search. Broadcast and convergecast. Shortest paths.
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+3
+{{< tdclose >}}
+{{< tdopen >}}
+Spanning trees. Minimum spanning trees.
+{{< tdclose >}}
+{{< tdopen >}}
+Homework 1b out
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+4
+{{< tdclose >}}
+{{< tdopen >}}
+Fault-tolerant consensus. Link failures: the two generals problem. Process failures (stopping, Byzantine). Algorithms for agreement with stopping and Byzantine failures. Exponential information gathering.
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+5
+{{< tdclose >}}
+{{< tdopen >}}
+Number-of-processor bounds for Byzantine agreement. Weak Byzantine agreement. Time bounds for consensus problems.
+{{< tdclose >}}
+{{< tdopen >}}
+
+
+Homework 1 due
+
+Homework 2a out
+
+
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+6
+{{< tdclose >}}
+{{< tdopen >}}
+_k_\-set-agreement. Approximate agreement. Distributed commit.
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+7
+{{< tdclose >}}
+{{< tdopen >}}
+Asynchronous distributed computing. Formal modeling of asynchronous systems using interacting state machines (I/O automata). Proving correctness of distributed algorithms.
+{{< tdclose >}}
+{{< tdopen >}}
+Homework 2b out
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+8
+{{< tdclose >}}
+{{< tdopen >}}
+Non-fault-tolerant algorithms for asynchronous networks. Leader election, breadth-first search, shortest paths, broadcast and convergecast.
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+9
+{{< tdclose >}}
+{{< tdopen >}}
+Spanning trees. Gallager _et al_. minimum spanning trees.
+{{< tdclose >}}
+{{< tdopen >}}
+
+
+Homework 2 due
+
+Homework 3a out
+
+
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+10
+{{< tdclose >}}
+{{< tdopen >}}
+Synchronizers. Synchronizer applications. Synchronous vs. asynchronous distributed systems.
+{{< tdclose >}}
+{{< tdopen >}}
+Homework 3b out
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+11
+{{< tdclose >}}
+{{< tdopen >}}
+Time, clocks, and the ordering of events. State-machine simulation. Vector timestamps.
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+12
+{{< tdclose >}}
+{{< tdopen >}}
+Stable property detection. Distributed termination. Global snapshots. Deadlock detection.
+{{< tdclose >}}
+{{< tdopen >}}
+
+
+Homework 3 due
+
+Homework 4a out
+
+
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+13
+{{< tdclose >}}
+{{< tdopen >}}
+Asynchronous shared-memory systems. The mutual exclusion problem. Mutual exclusion algorithms.
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+14
+{{< tdclose >}}
+{{< tdopen >}}
+More mutual exclusion algorithms. Bounds on shared memory for mutual exclusion. Resource allocation. The Dining Philosophers problem.
+{{< tdclose >}}
+{{< tdopen >}}
+Homework 4b out
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+15
+{{< tdclose >}}
+{{< tdopen >}}
+Shared-memory multiprocessors. Contention, caching, locality. Practical mutual exclusion algorithms. Reading/writing locks.
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+16
+{{< tdclose >}}
+{{< tdopen >}}
+Impossibility of consensus in asynchronous, fault-prone, shared-memory systems.
+{{< tdclose >}}
+{{< tdopen >}}
+
+
+Homework 4 due
+
+Homework 5a out
+
+
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+17
+{{< tdclose >}}
+{{< tdopen >}}
+Atomic objects
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+18
+{{< tdclose >}}
+{{< tdopen >}}
+Atomic snapshot algorithms. Atomic read/write register algorithms.
+{{< tdclose >}}
+{{< tdopen >}}
+Homework 5b out
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+19
+{{< tdclose >}}
+{{< tdopen >}}
+List algorithms: locking algorithms, optimistic algorithms, lock-free algorithms, lazy algorithms.
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+20
+{{< tdclose >}}
+{{< tdopen >}}
+Transactional memory: obstruction-free and lock-based implementations.
+{{< tdclose >}}
+{{< tdopen >}}
+
+
+Homework 5 due
+
+Homework 6a out
+
+
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+21
+{{< tdclose >}}
+{{< tdopen >}}
+Wait-free computability. The wait-free consensus hierarchy.
+{{< tdclose >}}
+{{< tdopen >}}
+Homework 6b out
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+22
+{{< tdclose >}}
+{{< tdopen >}}
+Wait-free vs. _f_\-fault-tolerant atomic objects. Boosting fault-tolerance.
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+23
+{{< tdclose >}}
+{{< tdopen >}}
+Asynchronous network model vs. asynchronous shared-memory model. Impossibility of consensus in asynchronous networks. Failure detectors and consensus. Paxos consensus algorithm.
+{{< tdclose >}}
+{{< tdopen >}}
+
+
+Homework 6 due
+
+Homework 7 out
+
+
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+24
+{{< tdclose >}}
+{{< tdopen >}}
+Self-stabilizing algorithms
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+25
+{{< tdclose >}}
+{{< tdopen >}}
+Timing-based systems. Modeling and verification. Timing-based algorithms for mutual exclusion and consensus. Clock synchronization.
+{{< tdclose >}}
+{{< tdopen >}}
+Homework 7 due
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}

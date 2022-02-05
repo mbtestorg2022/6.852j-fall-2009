@@ -107,8 +107,45 @@ Grading
 
 Your course grade will be based on problem set grades, problem set grading, and class participation. Problem sets will be graded on inclusion of the important logical steps and ideas. Class participation will be evaluated based on attendance and quality and quantity of participation. Problem set grading will be judged by quality and promptness.
 
-| ACTIVITIES | PERCENTAGES |
-| --- | --- |
-| Problem sets (7) | 70% |
-| Class participation | 20% |
-| Problem set grading | 10%
+{{< tableopen >}}
+{{< theadopen >}}
+{{< tropen >}}
+{{< thopen >}}
+ACTIVITIES
+{{< thclose >}}
+{{< thopen >}}
+PERCENTAGES
+{{< thclose >}}
+
+{{< trclose >}}
+
+{{< theadclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+Problem sets (7)
+{{< tdclose >}}
+{{< tdopen >}}
+70%
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+Class participation
+{{< tdclose >}}
+{{< tdopen >}}
+20%
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+Problem set grading
+{{< tdclose >}}
+{{< tdopen >}}
+10%
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}

@@ -46,43 +46,609 @@ In addition, some research papers that are not covered in the textbook will be c
 Reading by Session
 ------------------
 
-| SES # | TOPICS | READINGS |
-| --- | --- | --- |
-| 1 | Course overview. Synchronous networks. Leader election in synchronous ring networks. | \[Lynch\] Chapters 1 and 2, sections 3.1 to 3.5. |
-| 2 | Leader election in rings. Basic computational tasks in general synchronous networks: leader election. Breadth-first search. Broadcast and convergecast. Shortest paths. | \[Lynch\] Section 3.6, and sections 4.1 to 4.3. |
-| 3 | Spanning trees. Shortest paths (Bellman-Ford). Minimum spanning trees. Maximal independent sets (summary). | \[Lynch\] Sections 4.3 to 4.5 (skip 4.5.3). |
-| 4 | Fault-tolerant consensus. Link failures: the two generals problem. Process failures (stopping, Byzantine). Algorithms for agreement with stopping and Byzantine failures. Exponential information gathering. | \[Lynch\] Sections 5.1 and 6.1 to 6.3. |
-| 5 | Number-of-processor bounds for Byzantine agreement. Weak Byzantine agreement. Time bounds for consensus problems. |  {{< br >}}{{< br >}} \[Lynch\] Sections 6.4 to 6.7. {{< br >}}{{< br >}} Aguilera, Marcos Kawazoe, and Sam Toueg. "A Simple Bivalency Proof that _t_\-Resilient Consensus Requires _t_+1 Rounds." _Information Processing Letters_ 71, nos. 3-4 (August 1999): 155-158. {{< br >}}{{< br >}} {{< h 3 >}}Optional{{< /h >}} {{< br >}}{{< br >}} Keidar, Idit, and Sergio Rajsbaum. "[A Simple Proof of the Uniform Consensus Synchronous Lower Bound](http://webee.technion.ac.il/~idish/Abstracts/uniform-bound.html)." _Information Processing Letters_ 85, no. 1 (January 2003): 47-52. {{< br >}}{{< br >}}  |
-| 6 | _k_\-set-agreement. Approximate agreement. Distributed commit. | \[Lynch\] Chapter 7. |
-| 7 | Asynchronous distributed computing. Formal modeling of asynchronous systems using interacting state machines (I/O automata). Proving correctness of distributed algorithms. | \[Lynch\] Chapter 8. |
-| 8 | Non-fault-tolerant algorithms for asynchronous networks. Leader election, breadth-first search, shortest paths, broadcast and convergecast. | \[Lynch\] Chapters 14 and 15. |
-| 9 | Spanning trees. Gallager _et al_. minimum spanning trees. |  {{< br >}}{{< br >}} \[Lynch\] Sections 15.3 to 15.5. {{< br >}}{{< br >}} Gallager, R. G., P. A. Humblet, and P. M. Spira. "A Distributed Algorithm for Minimum-Weight Spanning Trees." _ACM Transactions on Programming Languages and Systems_ 5, no. 1 (January 1983): 66-77. {{< br >}}{{< br >}}  |
-| 10 | Synchronizers. Synchronizer applications. Synchronous _vs_. asynchronous distributed systems. | \[Lynch\] Chapter 16. |
-| 11 | Time, clocks, and the ordering of events. State-machine simulation. Vector timestamps. |  {{< br >}}{{< br >}} \[Lynch\] Chapter 18. {{< br >}}{{< br >}} Lamport, Leslie. "Time, Clocks, and the Ordering of Events in a Distributed System." _Communications of the Association for Computing Machinery_ 21, no. 7 (July 1978): 558-565. (![This resource may not render correctly in a screen reader.](/images/inacessible.gif)[PDF](http://research.microsoft.com/en-us/um/people/lamport/pubs/time-clocks.pdf)) {{< br >}}{{< br >}} Mattern, Friedemann. "Virtual Time and Global States of Distributed Systems." In _Parallel and Distributed Algorithms: Proceedings of the International Workshop on Parallel and Distributed Algorithms (Chateau de Bonas, Gers, France, October, 1988)_. Edited by Michel Cosnard, et al. Amsterdam, The Netherlands: North Holland, 1989, 215-226. ISBN: 9780444873675. Reprint, Yang, Zhonghua, and T. Anthony Marsland, eds. "Virtual Time and Global States of Distributed Systems." _In Global States and Time in Distributed Systems_. Los Alamitos, CA: IEEE Computer Society Press, 1994, pp. 123-133. ISBN: 9780818653001. {{< br >}}{{< br >}}  |
-| 12 | Stable property detection. Distributed termination. Global snapshots. Deadlock detection. | \[Lynch\] Chapter 19. |
-| 13 | Asynchronous shared-memory systems. The mutual exclusion problem. Mutual exclusion algorithms: Dijkstra’s algorithm, Peterson’s algorithm, and Lamport’s Bakery algorithm. | \[Lynch\] Chapter 9 and sections 10.1 to 10.7. |
-| 14 | More mutual exclusion algorithms. Bounds on shared memory for mutual exclusion. Resource allocation. The Dining Philosophers problem. | \[Lynch\] Sections 10.6 to 10.8, and 10.9. |
-| 15 | Shared-memory multiprocessors. Contention, caching, locality. Practical mutual exclusion algorithms. Reading/writing locks. |  {{< br >}}{{< br >}} \[Herlihy and Shavit\] Chapter 7. {{< br >}}{{< br >}} \[Lynch\] Chapter 11. {{< br >}}{{< br >}} Mellor-Crummey, John M., and Michael L. Scott. "Algorithms for Scalable Synchronization on Shared-Memory Multiprocessors." _ACM Transactions on Computer Systems_ 9, no. 1 (February 1991): 21-65. {{< br >}}{{< br >}} {{< h 3 >}}Optional{{< /h >}} {{< br >}}{{< br >}} Magnussen, Peter, Anders Landin, and Erik Hagersten. "Queue Locks on Cache Coherent Multiprocessors." _Proceedings of the 8th International Symposium on Parallel Processing_, 1994, pp. 165-171. {{< br >}}{{< br >}}  |
-| 16 | Impossibility of consensus in asynchronous, fault-prone, shared-memory systems. |  {{< br >}}{{< br >}} \[Lynch\] Chapters 11 and 12. {{< br >}}{{< br >}} Fischer, Michael J., Nancy A. Lynch, and Michael S. Paterson. "Impossibility of Distributed Consensus with One Faulty Process." _Journal of the Association for Computing Machinery_ 32, no. 2 (April 1985): 374-382. {{< br >}}{{< br >}}  |
-| 17 | Atomic objects |  {{< br >}}{{< br >}} \[Lynch\] Chapter 13 (sections 13.1 and 13.2). {{< br >}}{{< br >}}  |
-| 18 | Atomic snapshot algorithms. Atomic read/write register algorithms. | \[Lynch\] Chapter 13 (sections 13.3 and 13.4). |
-| 19 | List algorithms: locking algorithms, optimistic algorithms, lock-free algorithms, lazy algorithms. | \[Herlihy and Shavit\] Chapter 9. |
-| 20 | Transactional memory: obstruction-free and lock-based implementations. |  {{< br >}}{{< br >}} \[Herlihy and Shavit\] Chapter 18. {{< br >}}{{< br >}} \[Guerraoui and Kapalka\] Chapters 1 to 4. {{< br >}}{{< br >}}  |
-| 21 | Wait-free computability. The wait-free consensus hierarchy. |  {{< br >}}{{< br >}} Herlihy, Maurice. "Wait-Free Synchronization." _ACM Transactions on Programming Languages and Systems_ 13, no. 1 (January 1991): 124-149. {{< br >}}{{< br >}} \[Attiya and Welch\] Chapter 15. {{< br >}}{{< br >}}  |
-| 22 | Wait-free vs. _f_\-fault-tolerant atomic objects. Boosting fault-tolerance. |  {{< br >}}{{< br >}} Borowsky, Elizabeth, Eli Gafni, Nancy Lynch, and Sergio Rajsbaum. "The BG Distributed Simulation Algorithm." _Distributed Computing_ 14 (2001): 127-146. {{< br >}}{{< br >}} Attie, Paul, Rachid Guerraoui, Petr Kouznetsov, Nancy Lynch, and Sergio Rajsbaum. "The Impossibility of Boosting Distributed Service Resilience." Submitted for journal publication, September 2009. {{< br >}}{{< br >}} Chandra, Tushar D., Vassos Hadzilacos, Prasad Jayanti, and Sam Toueg. "Generalized Irreducibility of Consensus and the Equivalence of _t_\-Resilient and Wait-Free Implementations of Consensus." _SIAM Journal on Computing_ 34, no. 2 (2004): 333-357. {{< br >}}{{< br >}}  |
-| 23 | Asynchronous network model vs. asynchronous shared-memory model. Impossibility of consensus in asynchronous networks. Failure detectors and consensus. Paxos consensus algorithm. |  {{< br >}}{{< br >}} \[Lynch\] Chapter 17. {{< br >}}{{< br >}} Lamport, Leslie. "The Part-Time Parliament." _ACM Transactions on Computer Systems_ 16, no. 2 (May 1998): 133-169. Also available as Research Report 49, Digital Equipment Corporation Systems Research Center, Palo Alto, CA, September 1989. {{< br >}}{{< br >}}  |
-| 24 | Self-stabilizing algorithms | \[Dolev\] Chapter 2. |
-| 25 | Timing-based systems. Modeling and verification. Timing-based algorithms for mutual exclusion and consensus. Clock synchronization. |  {{< br >}}{{< br >}} \[Lynch\] Chapters 23 to 25. {{< br >}}{{< br >}} \[Attiya and Welch\] Section 6.3 and chapter 13. {{< br >}}{{< br >}}  
+{{< tableopen >}}
+{{< theadopen >}}
+{{< tropen >}}
+{{< thopen >}}
+SES #
+{{< thclose >}}
+{{< thopen >}}
+TOPICS
+{{< thclose >}}
+{{< thopen >}}
+READINGS
+{{< thclose >}}
+
+{{< trclose >}}
+
+{{< theadclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+1
+{{< tdclose >}}
+{{< tdopen >}}
+Course overview. Synchronous networks. Leader election in synchronous ring networks.
+{{< tdclose >}}
+{{< tdopen >}}
+\[Lynch\] Chapters 1 and 2, sections 3.1 to 3.5.
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+2
+{{< tdclose >}}
+{{< tdopen >}}
+Leader election in rings. Basic computational tasks in general synchronous networks: leader election. Breadth-first search. Broadcast and convergecast. Shortest paths.
+{{< tdclose >}}
+{{< tdopen >}}
+\[Lynch\] Section 3.6, and sections 4.1 to 4.3.
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+3
+{{< tdclose >}}
+{{< tdopen >}}
+Spanning trees. Shortest paths (Bellman-Ford). Minimum spanning trees. Maximal independent sets (summary).
+{{< tdclose >}}
+{{< tdopen >}}
+\[Lynch\] Sections 4.3 to 4.5 (skip 4.5.3).
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+4
+{{< tdclose >}}
+{{< tdopen >}}
+Fault-tolerant consensus. Link failures: the two generals problem. Process failures (stopping, Byzantine). Algorithms for agreement with stopping and Byzantine failures. Exponential information gathering.
+{{< tdclose >}}
+{{< tdopen >}}
+\[Lynch\] Sections 5.1 and 6.1 to 6.3.
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+5
+{{< tdclose >}}
+{{< tdopen >}}
+Number-of-processor bounds for Byzantine agreement. Weak Byzantine agreement. Time bounds for consensus problems.
+{{< tdclose >}}
+{{< tdopen >}}
+
+
+\[Lynch\] Sections 6.4 to 6.7.
+
+Aguilera, Marcos Kawazoe, and Sam Toueg. "A Simple Bivalency Proof that _t_\-Resilient Consensus Requires _t_+1 Rounds." _Information Processing Letters_ 71, nos. 3-4 (August 1999): 155-158.
+
+### Optional
+
+Keidar, Idit, and Sergio Rajsbaum. "[A Simple Proof of the Uniform Consensus Synchronous Lower Bound](http://webee.technion.ac.il/~idish/Abstracts/uniform-bound.html)." _Information Processing Letters_ 85, no. 1 (January 2003): 47-52.
+
+
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+6
+{{< tdclose >}}
+{{< tdopen >}}
+_k_\-set-agreement. Approximate agreement. Distributed commit.
+{{< tdclose >}}
+{{< tdopen >}}
+\[Lynch\] Chapter 7.
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+7
+{{< tdclose >}}
+{{< tdopen >}}
+Asynchronous distributed computing. Formal modeling of asynchronous systems using interacting state machines (I/O automata). Proving correctness of distributed algorithms.
+{{< tdclose >}}
+{{< tdopen >}}
+\[Lynch\] Chapter 8.
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+8
+{{< tdclose >}}
+{{< tdopen >}}
+Non-fault-tolerant algorithms for asynchronous networks. Leader election, breadth-first search, shortest paths, broadcast and convergecast.
+{{< tdclose >}}
+{{< tdopen >}}
+\[Lynch\] Chapters 14 and 15.
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+9
+{{< tdclose >}}
+{{< tdopen >}}
+Spanning trees. Gallager _et al_. minimum spanning trees.
+{{< tdclose >}}
+{{< tdopen >}}
+
+
+\[Lynch\] Sections 15.3 to 15.5.
+
+Gallager, R. G., P. A. Humblet, and P. M. Spira. "A Distributed Algorithm for Minimum-Weight Spanning Trees." _ACM Transactions on Programming Languages and Systems_ 5, no. 1 (January 1983): 66-77.
+
+
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+10
+{{< tdclose >}}
+{{< tdopen >}}
+Synchronizers. Synchronizer applications. Synchronous _vs_. asynchronous distributed systems.
+{{< tdclose >}}
+{{< tdopen >}}
+\[Lynch\] Chapter 16.
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+11
+{{< tdclose >}}
+{{< tdopen >}}
+Time, clocks, and the ordering of events. State-machine simulation. Vector timestamps.
+{{< tdclose >}}
+{{< tdopen >}}
+
+
+\[Lynch\] Chapter 18.
+
+Lamport, Leslie. "Time, Clocks, and the Ordering of Events in a Distributed System." _Communications of the Association for Computing Machinery_ 21, no. 7 (July 1978): 558-565. (![This resource may not render correctly in a screen reader.](/images/inacessible.gif)[PDF](http://research.microsoft.com/en-us/um/people/lamport/pubs/time-clocks.pdf))
+
+Mattern, Friedemann. "Virtual Time and Global States of Distributed Systems." In _Parallel and Distributed Algorithms: Proceedings of the International Workshop on Parallel and Distributed Algorithms (Chateau de Bonas, Gers, France, October, 1988)_. Edited by Michel Cosnard, et al. Amsterdam, The Netherlands: North Holland, 1989, 215-226. ISBN: 9780444873675. Reprint, Yang, Zhonghua, and T. Anthony Marsland, eds. "Virtual Time and Global States of Distributed Systems." _In Global States and Time in Distributed Systems_. Los Alamitos, CA: IEEE Computer Society Press, 1994, pp. 123-133. ISBN: 9780818653001.
+
+
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+12
+{{< tdclose >}}
+{{< tdopen >}}
+Stable property detection. Distributed termination. Global snapshots. Deadlock detection.
+{{< tdclose >}}
+{{< tdopen >}}
+\[Lynch\] Chapter 19.
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+13
+{{< tdclose >}}
+{{< tdopen >}}
+Asynchronous shared-memory systems. The mutual exclusion problem. Mutual exclusion algorithms: Dijkstra’s algorithm, Peterson’s algorithm, and Lamport’s Bakery algorithm.
+{{< tdclose >}}
+{{< tdopen >}}
+\[Lynch\] Chapter 9 and sections 10.1 to 10.7.
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+14
+{{< tdclose >}}
+{{< tdopen >}}
+More mutual exclusion algorithms. Bounds on shared memory for mutual exclusion. Resource allocation. The Dining Philosophers problem.
+{{< tdclose >}}
+{{< tdopen >}}
+\[Lynch\] Sections 10.6 to 10.8, and 10.9.
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+15
+{{< tdclose >}}
+{{< tdopen >}}
+Shared-memory multiprocessors. Contention, caching, locality. Practical mutual exclusion algorithms. Reading/writing locks.
+{{< tdclose >}}
+{{< tdopen >}}
+
+
+\[Herlihy and Shavit\] Chapter 7.
+
+\[Lynch\] Chapter 11.
+
+Mellor-Crummey, John M., and Michael L. Scott. "Algorithms for Scalable Synchronization on Shared-Memory Multiprocessors." _ACM Transactions on Computer Systems_ 9, no. 1 (February 1991): 21-65.
+
+### Optional
+
+Magnussen, Peter, Anders Landin, and Erik Hagersten. "Queue Locks on Cache Coherent Multiprocessors." _Proceedings of the 8th International Symposium on Parallel Processing_, 1994, pp. 165-171.
+
+
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+16
+{{< tdclose >}}
+{{< tdopen >}}
+Impossibility of consensus in asynchronous, fault-prone, shared-memory systems.
+{{< tdclose >}}
+{{< tdopen >}}
+
+
+\[Lynch\] Chapters 11 and 12.
+
+Fischer, Michael J., Nancy A. Lynch, and Michael S. Paterson. "Impossibility of Distributed Consensus with One Faulty Process." _Journal of the Association for Computing Machinery_ 32, no. 2 (April 1985): 374-382.
+
+
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+17
+{{< tdclose >}}
+{{< tdopen >}}
+Atomic objects
+{{< tdclose >}}
+{{< tdopen >}}
+
+
+\[Lynch\] Chapter 13 (sections 13.1 and 13.2).
+
+
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+18
+{{< tdclose >}}
+{{< tdopen >}}
+Atomic snapshot algorithms. Atomic read/write register algorithms.
+{{< tdclose >}}
+{{< tdopen >}}
+\[Lynch\] Chapter 13 (sections 13.3 and 13.4).
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+19
+{{< tdclose >}}
+{{< tdopen >}}
+List algorithms: locking algorithms, optimistic algorithms, lock-free algorithms, lazy algorithms.
+{{< tdclose >}}
+{{< tdopen >}}
+\[Herlihy and Shavit\] Chapter 9.
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+20
+{{< tdclose >}}
+{{< tdopen >}}
+Transactional memory: obstruction-free and lock-based implementations.
+{{< tdclose >}}
+{{< tdopen >}}
+
+
+\[Herlihy and Shavit\] Chapter 18.
+
+\[Guerraoui and Kapalka\] Chapters 1 to 4.
+
+
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+21
+{{< tdclose >}}
+{{< tdopen >}}
+Wait-free computability. The wait-free consensus hierarchy.
+{{< tdclose >}}
+{{< tdopen >}}
+
+
+Herlihy, Maurice. "Wait-Free Synchronization." _ACM Transactions on Programming Languages and Systems_ 13, no. 1 (January 1991): 124-149.
+
+\[Attiya and Welch\] Chapter 15.
+
+
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+22
+{{< tdclose >}}
+{{< tdopen >}}
+Wait-free vs. _f_\-fault-tolerant atomic objects. Boosting fault-tolerance.
+{{< tdclose >}}
+{{< tdopen >}}
+
+
+Borowsky, Elizabeth, Eli Gafni, Nancy Lynch, and Sergio Rajsbaum. "The BG Distributed Simulation Algorithm." _Distributed Computing_ 14 (2001): 127-146.
+
+Attie, Paul, Rachid Guerraoui, Petr Kouznetsov, Nancy Lynch, and Sergio Rajsbaum. "The Impossibility of Boosting Distributed Service Resilience." Submitted for journal publication, September 2009.
+
+Chandra, Tushar D., Vassos Hadzilacos, Prasad Jayanti, and Sam Toueg. "Generalized Irreducibility of Consensus and the Equivalence of _t_\-Resilient and Wait-Free Implementations of Consensus." _SIAM Journal on Computing_ 34, no. 2 (2004): 333-357.
+
+
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+23
+{{< tdclose >}}
+{{< tdopen >}}
+Asynchronous network model vs. asynchronous shared-memory model. Impossibility of consensus in asynchronous networks. Failure detectors and consensus. Paxos consensus algorithm.
+{{< tdclose >}}
+{{< tdopen >}}
+
+
+\[Lynch\] Chapter 17.
+
+Lamport, Leslie. "The Part-Time Parliament." _ACM Transactions on Computer Systems_ 16, no. 2 (May 1998): 133-169. Also available as Research Report 49, Digital Equipment Corporation Systems Research Center, Palo Alto, CA, September 1989.
+
+
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+24
+{{< tdclose >}}
+{{< tdopen >}}
+Self-stabilizing algorithms
+{{< tdclose >}}
+{{< tdopen >}}
+\[Dolev\] Chapter 2.
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+25
+{{< tdclose >}}
+{{< tdopen >}}
+Timing-based systems. Modeling and verification. Timing-based algorithms for mutual exclusion and consensus. Clock synchronization.
+{{< tdclose >}}
+{{< tdopen >}}
+
+
+\[Lynch\] Chapters 23 to 25.
+
+\[Attiya and Welch\] Section 6.3 and chapter 13.
+
+
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 {{< anchor "Supplementary_Readings" >}}Supplementary Readings{{< /anchor >}}
 ----------------------------------------------------------------------------
 
-| TOPICS | READINGS |
-| --- | --- |
-| Dijkstra Prize papers |  {{< br >}}{{< br >}} In each of the years 2000-2009, a prize has been awarded to a research paper that has had a strong impact on research in the area of distributed algorithms. The prize was originally called the "PODC Influential Paper Award." After the death of Edsger Dijkstra, one of the pioneers of the field, in August 2002, the prize was renamed the "Dijkstra Prize." {{< br >}}{{< br >}} We will study the key contributions of most of these papers during this semester. In case you want to read the original papers for yourselves, here is a list: {{< br >}}{{< br >}} Lamport, Leslie. "Time, Clocks, and the Ordering of Events in a Distributed System." _Communications of the Association for Computing Machinery_ 21, no. 7 (July 1978): 558-565. (![This resource may not render correctly in a screen reader.](/images/inacessible.gif)[PDF](http://research.microsoft.com/en-us/um/people/lamport/pubs/time-clocks.pdf)) {{< br >}}{{< br >}} Fischer, Michael J., Nancy A. Lynch, and Michael S. Paterson. "Impossibility of Distributed Consensus with One Faulty Process." _Journal of the Association for Computing Machinery_ 32, no. 2 (April 1985): 374-382. {{< br >}}{{< br >}} Dijkstra, Edsger W. "Self-Stabilizing Systems in Spite of Distributed Control." _Communications of the Association for Computing Machinery_ 17, no. 11 (November 1974): 643-644. {{< br >}}{{< br >}} Herlihy, Maurice. "Wait-Free Synchronization." _ACM Transactions on Programming Languages and Systems_ 13, no. 1 (January 1991): 124-149. {{< br >}}{{< br >}} Gallager, R. G., P. A. Humblet, and P. M. Spira. "A Distributed Algorithm for Minimum-Weight Spanning Trees." _ACM Transactions on Programming Languages and Systems_ 5, no. 1 (January 1983): 66-77. {{< br >}}{{< br >}} Pease, M., R. Shostak, and L. Lamport. "Reaching Agreement in the Presence of Faults." _Journal of the Association for Computing Machinery_ 27, no. 2 (April 1980): 228-234. (![This resource may not render correctly in a screen reader.](/images/inacessible.gif)[PDF](http://research.microsoft.com/en-us/um/people/lamport/pubs/reaching.pdf)) {{< br >}}{{< br >}} Mellor-Crummey, John M., and Michael L. Scott. "Algorithms for Scalable Synchronization on Shared-Memory Multiprocessors." _ACM Transactions on Computer Systems_ 9, no. 1 (February 1991): 21-65. {{< br >}}{{< br >}} Dwork, Cynthia, Nancy Lynch, and Larry Stockmeyer. "Consensus in the Presence of Partial Synchrony." _Journal of the Association for Computing Machinery_ 35, no. 2 (April 1988): 288-323. {{< br >}}{{< br >}} Awerbuch, Baruch, and David Peleg. "Sparse Partitions." Proceedings of the 31st Annual IEEE Symposium on Foundations of Computer Science, St. Louis, Missouri, October, 1990, pp. 503-513. {{< br >}}{{< br >}} Halpern, Joseph, and Yoram Moses. "Knowledge and Common Knowledge in a Distributed Environment." _Journal of the Association for Computing Machinery_ 37, no. 3 (July 1990): 549-587. {{< br >}}{{< br >}}  |
-| Synchronous networks |  {{< br >}}{{< br >}} Aguilera, Marcos Kawazoe, and Sam Toueg. "A Simple Bivalency Proof that _t_\-Resilient Consensus Requires _t_+1 Rounds." _Information Processing Letters_ 71, nos. 3-4 (August 1999): 155-158. {{< br >}}{{< br >}} Keidar, Idit, and Sergio Rajsbaum. "[A Simple Proof of the Uniform Consensus Synchronous Lower Bound](http://webee.technion.ac.il/~idish/Abstracts/uniform-bound.html)." _Information Processing Letters_ 85, no. 1 (January 2003): 47-52. {{< br >}}{{< br >}}  |
-| Asynchronous networks |  {{< br >}}{{< br >}} Mattern, Friedemann. "Virtual Time and Global States of Distributed Systems." In _Parallel and Distributed Algorithms: Proceedings of the International Workshop on Parallel and Distributed Algorithms (Chateau de Bonas, Gers, France, October, 1988)_. Edited by Michel Cosnard, et al. Amsterdam, The Netherlands: North Holland, 1989, 215-226. ISBN: 9780444873675. Reprint, Yang, Zhonghua, and T. Anthony Marsland, eds. "Virtual Time and Global States of Distributed Systems." In _Global States and Time in Distributed Systems_. Los Alamitos, CA: IEEE Computer Society Press, 1994, pp. 123-133. ISBN: 9780818653001. {{< br >}}{{< br >}} Fidge, Colin. "Logical Time in Distributed Computing Systems." _IEEE Computer_ 24, no. 8 (August 1991): 28-33. {{< br >}}{{< br >}} Chaudhuri, Soma. "More _Choices_ Allow More _Faults_: Set Consensus Problems in Totally Asynchronous Systems." _Information and Computation_ 105, no. 1 (July 1993): 132-158. {{< br >}}{{< br >}}  |
-| Asynchronous shared memory | {{< h 3 >}}Mutual exclusion{{< /h >}} {{< br >}}{{< br >}} The following paper and thesis chapter present a new, fundamental lower bound for the time required to achieve mutual exclusion. {{< br >}}{{< br >}} Fan, Rui, and Nancy Lynch. "An Ω_(n log n)_ Lower Bound on the Cost of Mutual Exclusion." _Proceedings of the Twenty-Fifth Annual Symposium on Principles of Distributed Computing_ (_PODC'06_), Denver, Colorado, (July 22-26, 2006). Best Student Paper Award. {{< br >}}{{< br >}} Fan, Rui. "Mutual Exclusion." Chapter 4 in _Lower Bounds in Distributed Computing._ PhD dissertation, Department of Electrical Engineering and Computer Science, Massachusetts Institute of Technology, Cambridge, MA, February 2008. {{< br >}}{{< br >}} {{< h 3 >}}Wait-free computability and the wait-free consensus hierarchy{{< /h >}} {{< br >}}{{< br >}} This paper popularized the notion of wait-free computability, and also introduced the wait-free consensus hierarchy. {{< br >}}{{< br >}} Herlihy, Maurice. "Wait-Free Synchronization." _ACM Transactions on Programming Languages and Systems_ 13, no. 1 (January 1991): 124-149. {{< br >}}{{< br >}} This paper presents an interesting observation about the wait-free consensus hierarchy. {{< br >}}{{< br >}} Jayanti, Prasad. "Robust Wait-Free Hierarchies." _Journal of the Association for Computing Machinery_ 44, no. 4 (July 1997): 592-614. {{< br >}}{{< br >}} {{< h 3 >}}Wait-free vs. f-fault-tolerant data objects{{< /h >}} {{< br >}}{{< br >}} Chandra, Tushar D., Vassos Hadzilacos, Prasad Jayanti, and Sam Toueg. "Generalized Irreducibility of Consensus and the Equivalence of _t_\-Resilient and Wait-Free Implementations of Consensus." _SIAM Journal on Computing_ 34, no. 2 (2004): 333-357. {{< br >}}{{< br >}} Borowsky, Elizabeth, Eli Gafni, Nancy Lynch, and Sergio Rajsbaum. "The BG Distributed Simulation Algorithm." _Distributed Computing_ 14 (2001): 127-146. {{< br >}}{{< br >}} Attie, Paul, Rachid Guerraoui, Petr Kouznetsov, Nancy Lynch, and Sergio Rajsbaum. "The Impossibility of Boosting Distributed Service Resilience." Submitted for journal publication, September 2009. {{< br >}}{{< br >}} {{< h 3 >}}Failure detectors, consensus, and set consensus{{< /h >}} {{< br >}}{{< br >}} The idea of a "failure detector" was introduced in the following paper, which also shows how certain failure detectors can be used to solve consensus. {{< br >}}{{< br >}} Chandra, Tushar Deepak, and Sam Toueg. "Unreliable Failure Detectors for Reliable Distributed Systems." _Journal of the Association for Computing Machinery_ 43, no. 2 (March 1996): 225-267. {{< br >}}{{< br >}} Lamport's "Paxos" paper solves consensus, essentially assuming an underlying failure detector service: {{< br >}}{{< br >}} Lamport, Leslie. "The Part-Time Parliament." _ACM Transactions on Computer Systems_ 16, no. 2 (May 1998): 133-169. Also available as Research Report 49, Digital Equipment Corporation Systems Research Center, Palo Alto, CA, September 1989. {{< br >}}{{< br >}} The following paper proves that a certain failure detector is provably "weakest" for solving consensus: {{< br >}}{{< br >}} Chandra, Tushar Deepak, Vassos Hadzilacos, and Sam Toueg. "The Weakest Failure Detector for Solving Consensus." _Journal of the Association for Computing Machinery_ 43, no. 4 (July 1996): 685-722. {{< br >}}{{< br >}} There are several new papers on failure detectors for set consensus, starting with this one: {{< br >}}{{< br >}} Guerraoui, Rachid, Maurice Herlihy, Petr Kouznetsov, Nancy Lynch, and Calvin Newport. "On the Weakest Failure Detector Ever." _Distributed Computing_ 21, no. 5 Special Issue (February 2009): 353-366. {{< br >}}{{< br >}}  |
-| Multiprocessor programming |  {{< br >}}{{< br >}} The brand-new Herlihy-Shavit textbook covers the principles of multiprocessor programming quite thoroughly: {{< br >}}{{< br >}} Herlihy, Maurice, and Nir Shavit. _The Art of Multiprocessor Programming_. Burlington, MA: Morgan Kaufmann, 2008. ISBN: 9780123705914. {{< br >}}{{< br >}} This paper introduced the MCS (Mellor-Crummey Scott) queue lock, which is fast, scalable and fair in a wide variety of multiprocessor systems. {{< br >}}{{< br >}} Mellor-Crummey, John M., and Michael L. Scott. "Algorithms for Scalable Synchronization on Shared-Memory Multiprocessors." _ACM Transactions on Computer Systems_ 9, no. 1 (February 1991): 21-65. {{< br >}}{{< br >}} Magnussen, Peter, Anders Landin, and Erik Hagersten. "Queue Locks on Cache Coherent Multiprocessors." _Proceedings of the 8th International Symposium on Parallel Processing_, 1994, pp. 165-171. {{< br >}}{{< br >}} The following monograph draft describes theoretical aspects of transactional memory. {{< br >}}{{< br >}} Guerraoui, Rachid, and Michal Kapalka. _Transactional Memory: The Theory_. San Rafael, CA: Morgan and Claypool, 2010. ISBN: 9781608450114. {{< br >}}{{< br >}}  |
-| Self-stabilization |  {{< br >}}{{< br >}} Dijkstra's breakthrough paper originated the idea of distributed algorithm self-stabilization: {{< br >}}{{< br >}} Dijkstra, Edsger W. "Self-Stabilizing Systems in Spite of Distributed Control." _Communications of the Association for Computing Machinery_ 17, no. 11 (November 1974): 643-644. {{< br >}}{{< br >}} The Dolev book contains everything you might want to know about basic self-stabilizing distributed algorithms: {{< br >}}{{< br >}} [![Buy at MIT Press](/images/mp_logo.gif)](https://mitpress.mit.edu/9780262041782) Dolev, Shlomi. _Self-Stabilization_. Cambridge, MA: MIT Press, 2000. ISBN: 9780262041782. {{< br >}}{{< br >}}  |
-| Timed systems |  {{< br >}}{{< br >}} The Attiya-Welch book contains a chapter on basic clock synchronization algorithms: {{< br >}}{{< br >}} Attiya, Hagit, and Jennifer Welch. _Distributed Computing: Fundamentals, Simulations, and Advanced Topics_. 2nd ed. New York, NY: Wiley-Interscience, 2004. ISBN: 9780471453246. {{< br >}}{{< br >}} The following paper and thesis contain a lower bound on "gradient" clock synchronization. The thesis chapter is more up-to-date than the journal paper. {{< br >}}{{< br >}} Fan, Rui, and Nancy Lynch. "Gradient Clock Synchronization." _Distributed Computing_ 18, no. 4 (March 2006): 255-266. {{< br >}}{{< br >}} Fan, Rui. "Gradient Clock Lower Bound." Chapter 2 in _Lower Bounds in Distributed Computing_. PhD dissertation, Department of Electrical Engineering and Computer Science, Massachusetts Institute of Technology, Cambridge, MA, February 2008. {{< br >}}{{< br >}} The following monograph contains basic formal modeling and proof methods for timing-based systems. It provides the mathematical foundation for the Tempo toolset that we will use in this course. {{< br >}}{{< br >}} Kaynar, Disun, Nancy Lynch, Roberto Segala, and Frits Vaandrager. _The Theory of Timed I/O Automata_. 2nd ed. San Rafael, CA: Morgan and Claypool, 2010. ISBN: 9781608450022. {{< br >}}{{< br >}}
+{{< tableopen >}}
+{{< theadopen >}}
+{{< tropen >}}
+{{< thopen >}}
+TOPICS
+{{< thclose >}}
+{{< thopen >}}
+READINGS
+{{< thclose >}}
+
+{{< trclose >}}
+
+{{< theadclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+Dijkstra Prize papers
+{{< tdclose >}}
+{{< tdopen >}}
+
+
+In each of the years 2000-2009, a prize has been awarded to a research paper that has had a strong impact on research in the area of distributed algorithms. The prize was originally called the "PODC Influential Paper Award." After the death of Edsger Dijkstra, one of the pioneers of the field, in August 2002, the prize was renamed the "Dijkstra Prize."
+
+We will study the key contributions of most of these papers during this semester. In case you want to read the original papers for yourselves, here is a list:
+
+Lamport, Leslie. "Time, Clocks, and the Ordering of Events in a Distributed System." _Communications of the Association for Computing Machinery_ 21, no. 7 (July 1978): 558-565. (![This resource may not render correctly in a screen reader.](/images/inacessible.gif)[PDF](http://research.microsoft.com/en-us/um/people/lamport/pubs/time-clocks.pdf))
+
+Fischer, Michael J., Nancy A. Lynch, and Michael S. Paterson. "Impossibility of Distributed Consensus with One Faulty Process." _Journal of the Association for Computing Machinery_ 32, no. 2 (April 1985): 374-382.
+
+Dijkstra, Edsger W. "Self-Stabilizing Systems in Spite of Distributed Control." _Communications of the Association for Computing Machinery_ 17, no. 11 (November 1974): 643-644.
+
+Herlihy, Maurice. "Wait-Free Synchronization." _ACM Transactions on Programming Languages and Systems_ 13, no. 1 (January 1991): 124-149.
+
+Gallager, R. G., P. A. Humblet, and P. M. Spira. "A Distributed Algorithm for Minimum-Weight Spanning Trees." _ACM Transactions on Programming Languages and Systems_ 5, no. 1 (January 1983): 66-77.
+
+Pease, M., R. Shostak, and L. Lamport. "Reaching Agreement in the Presence of Faults." _Journal of the Association for Computing Machinery_ 27, no. 2 (April 1980): 228-234. (![This resource may not render correctly in a screen reader.](/images/inacessible.gif)[PDF](http://research.microsoft.com/en-us/um/people/lamport/pubs/reaching.pdf))
+
+Mellor-Crummey, John M., and Michael L. Scott. "Algorithms for Scalable Synchronization on Shared-Memory Multiprocessors." _ACM Transactions on Computer Systems_ 9, no. 1 (February 1991): 21-65.
+
+Dwork, Cynthia, Nancy Lynch, and Larry Stockmeyer. "Consensus in the Presence of Partial Synchrony." _Journal of the Association for Computing Machinery_ 35, no. 2 (April 1988): 288-323.
+
+Awerbuch, Baruch, and David Peleg. "Sparse Partitions." Proceedings of the 31st Annual IEEE Symposium on Foundations of Computer Science, St. Louis, Missouri, October, 1990, pp. 503-513.
+
+Halpern, Joseph, and Yoram Moses. "Knowledge and Common Knowledge in a Distributed Environment." _Journal of the Association for Computing Machinery_ 37, no. 3 (July 1990): 549-587.
+
+
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+Synchronous networks
+{{< tdclose >}}
+{{< tdopen >}}
+
+
+Aguilera, Marcos Kawazoe, and Sam Toueg. "A Simple Bivalency Proof that _t_\-Resilient Consensus Requires _t_+1 Rounds." _Information Processing Letters_ 71, nos. 3-4 (August 1999): 155-158.
+
+Keidar, Idit, and Sergio Rajsbaum. "[A Simple Proof of the Uniform Consensus Synchronous Lower Bound](http://webee.technion.ac.il/~idish/Abstracts/uniform-bound.html)." _Information Processing Letters_ 85, no. 1 (January 2003): 47-52.
+
+
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+Asynchronous networks
+{{< tdclose >}}
+{{< tdopen >}}
+
+
+Mattern, Friedemann. "Virtual Time and Global States of Distributed Systems." In _Parallel and Distributed Algorithms: Proceedings of the International Workshop on Parallel and Distributed Algorithms (Chateau de Bonas, Gers, France, October, 1988)_. Edited by Michel Cosnard, et al. Amsterdam, The Netherlands: North Holland, 1989, 215-226. ISBN: 9780444873675. Reprint, Yang, Zhonghua, and T. Anthony Marsland, eds. "Virtual Time and Global States of Distributed Systems." In _Global States and Time in Distributed Systems_. Los Alamitos, CA: IEEE Computer Society Press, 1994, pp. 123-133. ISBN: 9780818653001.
+
+Fidge, Colin. "Logical Time in Distributed Computing Systems." _IEEE Computer_ 24, no. 8 (August 1991): 28-33.
+
+Chaudhuri, Soma. "More _Choices_ Allow More _Faults_: Set Consensus Problems in Totally Asynchronous Systems." _Information and Computation_ 105, no. 1 (July 1993): 132-158.
+
+
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+Asynchronous shared memory
+{{< tdclose >}}
+{{< tdopen >}}
+
+
+### Mutual exclusion
+
+The following paper and thesis chapter present a new, fundamental lower bound for the time required to achieve mutual exclusion.
+
+Fan, Rui, and Nancy Lynch. "An Ω_(n log n)_ Lower Bound on the Cost of Mutual Exclusion." _Proceedings of the Twenty-Fifth Annual Symposium on Principles of Distributed Computing_ (_PODC'06_), Denver, Colorado, (July 22-26, 2006). Best Student Paper Award.
+
+Fan, Rui. "Mutual Exclusion." Chapter 4 in _Lower Bounds in Distributed Computing._ PhD dissertation, Department of Electrical Engineering and Computer Science, Massachusetts Institute of Technology, Cambridge, MA, February 2008.
+
+### Wait-free computability and the wait-free consensus hierarchy
+
+This paper popularized the notion of wait-free computability, and also introduced the wait-free consensus hierarchy.
+
+Herlihy, Maurice. "Wait-Free Synchronization." _ACM Transactions on Programming Languages and Systems_ 13, no. 1 (January 1991): 124-149.
+
+This paper presents an interesting observation about the wait-free consensus hierarchy.
+
+Jayanti, Prasad. "Robust Wait-Free Hierarchies." _Journal of the Association for Computing Machinery_ 44, no. 4 (July 1997): 592-614.
+
+### Wait-free vs. f-fault-tolerant data objects
+
+Chandra, Tushar D., Vassos Hadzilacos, Prasad Jayanti, and Sam Toueg. "Generalized Irreducibility of Consensus and the Equivalence of _t_\-Resilient and Wait-Free Implementations of Consensus." _SIAM Journal on Computing_ 34, no. 2 (2004): 333-357.
+
+Borowsky, Elizabeth, Eli Gafni, Nancy Lynch, and Sergio Rajsbaum. "The BG Distributed Simulation Algorithm." _Distributed Computing_ 14 (2001): 127-146.
+
+Attie, Paul, Rachid Guerraoui, Petr Kouznetsov, Nancy Lynch, and Sergio Rajsbaum. "The Impossibility of Boosting Distributed Service Resilience." Submitted for journal publication, September 2009.
+
+### Failure detectors, consensus, and set consensus
+
+The idea of a "failure detector" was introduced in the following paper, which also shows how certain failure detectors can be used to solve consensus.
+
+Chandra, Tushar Deepak, and Sam Toueg. "Unreliable Failure Detectors for Reliable Distributed Systems." _Journal of the Association for Computing Machinery_ 43, no. 2 (March 1996): 225-267.
+
+Lamport's "Paxos" paper solves consensus, essentially assuming an underlying failure detector service:
+
+Lamport, Leslie. "The Part-Time Parliament." _ACM Transactions on Computer Systems_ 16, no. 2 (May 1998): 133-169. Also available as Research Report 49, Digital Equipment Corporation Systems Research Center, Palo Alto, CA, September 1989.
+
+The following paper proves that a certain failure detector is provably "weakest" for solving consensus:
+
+Chandra, Tushar Deepak, Vassos Hadzilacos, and Sam Toueg. "The Weakest Failure Detector for Solving Consensus." _Journal of the Association for Computing Machinery_ 43, no. 4 (July 1996): 685-722.
+
+There are several new papers on failure detectors for set consensus, starting with this one:
+
+Guerraoui, Rachid, Maurice Herlihy, Petr Kouznetsov, Nancy Lynch, and Calvin Newport. "On the Weakest Failure Detector Ever." _Distributed Computing_ 21, no. 5 Special Issue (February 2009): 353-366.
+
+
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+Multiprocessor programming
+{{< tdclose >}}
+{{< tdopen >}}
+
+
+The brand-new Herlihy-Shavit textbook covers the principles of multiprocessor programming quite thoroughly:
+
+Herlihy, Maurice, and Nir Shavit. _The Art of Multiprocessor Programming_. Burlington, MA: Morgan Kaufmann, 2008. ISBN: 9780123705914.
+
+This paper introduced the MCS (Mellor-Crummey Scott) queue lock, which is fast, scalable and fair in a wide variety of multiprocessor systems.
+
+Mellor-Crummey, John M., and Michael L. Scott. "Algorithms for Scalable Synchronization on Shared-Memory Multiprocessors." _ACM Transactions on Computer Systems_ 9, no. 1 (February 1991): 21-65.
+
+Magnussen, Peter, Anders Landin, and Erik Hagersten. "Queue Locks on Cache Coherent Multiprocessors." _Proceedings of the 8th International Symposium on Parallel Processing_, 1994, pp. 165-171.
+
+The following monograph draft describes theoretical aspects of transactional memory.
+
+Guerraoui, Rachid, and Michal Kapalka. _Transactional Memory: The Theory_. San Rafael, CA: Morgan and Claypool, 2010. ISBN: 9781608450114.
+
+
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+Self-stabilization
+{{< tdclose >}}
+{{< tdopen >}}
+
+
+Dijkstra's breakthrough paper originated the idea of distributed algorithm self-stabilization:
+
+Dijkstra, Edsger W. "Self-Stabilizing Systems in Spite of Distributed Control." _Communications of the Association for Computing Machinery_ 17, no. 11 (November 1974): 643-644.
+
+The Dolev book contains everything you might want to know about basic self-stabilizing distributed algorithms:
+
+[![Buy at MIT Press](/images/mp_logo.gif)](https://mitpress.mit.edu/9780262041782) Dolev, Shlomi. _Self-Stabilization_. Cambridge, MA: MIT Press, 2000. ISBN: 9780262041782.
+
+
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+Timed systems
+{{< tdclose >}}
+{{< tdopen >}}
+
+
+The Attiya-Welch book contains a chapter on basic clock synchronization algorithms:
+
+Attiya, Hagit, and Jennifer Welch. _Distributed Computing: Fundamentals, Simulations, and Advanced Topics_. 2nd ed. New York, NY: Wiley-Interscience, 2004. ISBN: 9780471453246.
+
+The following paper and thesis contain a lower bound on "gradient" clock synchronization. The thesis chapter is more up-to-date than the journal paper.
+
+Fan, Rui, and Nancy Lynch. "Gradient Clock Synchronization." _Distributed Computing_ 18, no. 4 (March 2006): 255-266.
+
+Fan, Rui. "Gradient Clock Lower Bound." Chapter 2 in _Lower Bounds in Distributed Computing_. PhD dissertation, Department of Electrical Engineering and Computer Science, Massachusetts Institute of Technology, Cambridge, MA, February 2008.
+
+The following monograph contains basic formal modeling and proof methods for timing-based systems. It provides the mathematical foundation for the Tempo toolset that we will use in this course.
+
+Kaynar, Disun, Nancy Lynch, Roberto Segala, and Frits Vaandrager. _The Theory of Timed I/O Automata_. 2nd ed. San Rafael, CA: Morgan and Claypool, 2010. ISBN: 9781608450022.
+
+
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
