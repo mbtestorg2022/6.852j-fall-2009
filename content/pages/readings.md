@@ -210,7 +210,7 @@ Time, clocks, and the ordering of events. State-machine simulation. Vector times
 
 \[Lynch\] Chapter 18.
 
-Lamport, Leslie. "Time, Clocks, and the Ordering of Events in a Distributed System." _Communications of the Association for Computing Machinery_ 21, no. 7 (July 1978): 558-565. (![This resource may not render correctly in a screen reader.](/images/inacessible.gif)[PDF](http://research.microsoft.com/en-us/um/people/lamport/pubs/time-clocks.pdf))
+Lamport, Leslie. "Time, Clocks, and the Ordering of Events in a Distributed System." _Communications of the Association for Computing Machinery_ 21, no. 7 (July 1978): 558-565. ([PDF](http://research.microsoft.com/en-us/um/people/lamport/pubs/time-clocks.pdf))
 
 Mattern, Friedemann. "Virtual Time and Global States of Distributed Systems." In _Parallel and Distributed Algorithms: Proceedings of the International Workshop on Parallel and Distributed Algorithms (Chateau de Bonas, Gers, France, October, 1988)_. Edited by Michel Cosnard, et al. Amsterdam, The Netherlands: North Holland, 1989, 215-226. ISBN: 9780444873675. Reprint, Yang, Zhonghua, and T. Anthony Marsland, eds. "Virtual Time and Global States of Distributed Systems." _In Global States and Time in Distributed Systems_. Los Alamitos, CA: IEEE Computer Society Press, 1994, pp. 123-133. ISBN: 9780818653001.
 
@@ -470,7 +470,7 @@ In each of the years 2000-2009, a prize has been awarded to a research paper tha
 
 We will study the key contributions of most of these papers during this semester. In case you want to read the original papers for yourselves, here is a list:
 
-Lamport, Leslie. "Time, Clocks, and the Ordering of Events in a Distributed System." _Communications of the Association for Computing Machinery_ 21, no. 7 (July 1978): 558-565. (![This resource may not render correctly in a screen reader.](/images/inacessible.gif)[PDF](http://research.microsoft.com/en-us/um/people/lamport/pubs/time-clocks.pdf))
+Lamport, Leslie. "Time, Clocks, and the Ordering of Events in a Distributed System." _Communications of the Association for Computing Machinery_ 21, no. 7 (July 1978): 558-565. ([PDF](http://research.microsoft.com/en-us/um/people/lamport/pubs/time-clocks.pdf))
 
 Fischer, Michael J., Nancy A. Lynch, and Michael S. Paterson. "Impossibility of Distributed Consensus with One Faulty Process." _Journal of the Association for Computing Machinery_ 32, no. 2 (April 1985): 374-382.
 
@@ -480,7 +480,7 @@ Herlihy, Maurice. "Wait-Free Synchronization." _ACM Transactions on Programming 
 
 Gallager, R. G., P. A. Humblet, and P. M. Spira. "A Distributed Algorithm for Minimum-Weight Spanning Trees." _ACM Transactions on Programming Languages and Systems_ 5, no. 1 (January 1983): 66-77.
 
-Pease, M., R. Shostak, and L. Lamport. "Reaching Agreement in the Presence of Faults." _Journal of the Association for Computing Machinery_ 27, no. 2 (April 1980): 228-234. (![This resource may not render correctly in a screen reader.](/images/inacessible.gif)[PDF](http://research.microsoft.com/en-us/um/people/lamport/pubs/reaching.pdf))
+Pease, M., R. Shostak, and L. Lamport. "Reaching Agreement in the Presence of Faults." _Journal of the Association for Computing Machinery_ 27, no. 2 (April 1980): 228-234. ([PDF](http://research.microsoft.com/en-us/um/people/lamport/pubs/reaching.pdf))
 
 Mellor-Crummey, John M., and Michael L. Scott. "Algorithms for Scalable Synchronization on Shared-Memory Multiprocessors." _ACM Transactions on Computer Systems_ 9, no. 1 (February 1991): 21-65.
 
